@@ -1,12 +1,12 @@
 services:
   db:
-    image: postgres:16-alpine
-    container_name: spring_boot_postgres_db
+    image: postgres:15-alpine
+    container_name: spring_boot_aop
     restart: always
     environment:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: test
+      POSTGRES_DB: aop
     ports:
       - "5432:5432"
     volumes:

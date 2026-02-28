@@ -3,6 +3,7 @@ package com.example.aop.aop.serviceimpl;
 import com.example.aop.aop.services.ShipmentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
@@ -20,6 +21,7 @@ public class ShipmentServiceImpl implements ShipmentService {
     }
 
     @Override
+    @Transactional
     public String trackPackage(Long orderId) {
      try{
          log.info("Tracking the order");
